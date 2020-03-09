@@ -38,4 +38,6 @@ pip freeze > requirenment.text
 //you can install from requirenment
 pip install -r requirenment.text
 
+//test
+py manage.py test products.tests.ProductTestCase
 
