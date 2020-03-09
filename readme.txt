@@ -37,5 +37,5 @@ pip freeze > requirenment.text
 
 //you can install from requirenment
 pip install -r requirenment.text
-pip install django-taggit
+
 
