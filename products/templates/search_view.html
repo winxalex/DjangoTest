@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+            <div class="row mb-2 posts">
+                    {% for product in products %}
+                    <div class="col-md-6">
+                        <div class="cards">
+                            <div class="row no-gutters border rounded  flex-md-row mb-4 shadow-sm h-md-250">
+                                <div class="col p-4 d-flex flex-column position-static">
+                                    <h3 class="my-1">{{product.title}}</h3>
+                                    <div style="display:flex">
+                                        {% for tag in product.tags.all %}
+                                        <a href="" class="mr-1 badge badge-info">#{{ tag }}</a>
+                                        {% endfor %}
+                                    </div>
+                                    <p class="mb-auto">{{product.description}}</p>
+                                    <p class="mb-auto text-muted">{{product.published}}</p>
+                                </div>
+                            </div>
+                        </div>       
+                    </div>
+                    {% endfor %}
+            </div>
+            
+{% endblock content %}  
